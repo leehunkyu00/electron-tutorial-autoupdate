@@ -8,5 +8,19 @@
   <body>
     <h1>💖 Hello World!</h1>
     <p>Welcome to your Electron application.</p>
+    <p>Current version : <span id="version">vX.Y.Z</span></p>
+    <div id="messages"></div>
+    <script>
+      let version = window.location.hash.substring(1);
+      document.getElementById('version').innerHTML = version;
+
+      const { ipcRenderer } = require('electron');
+      ipcRenderer.on('message', function(event, text) {
+        var container = document.getElementById('messages');
+        var message = document.createElement('div');
+        message.innerHTML = text;
+        container.appendChild(message);
+      })
+    </script>
   </body>
 </html>
