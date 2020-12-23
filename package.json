@@ -1,7 +1,7 @@
 {
   "name": "tutorial",
   "productName": "tutorial",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
@@ -68,9 +68,9 @@
     },
     "nsis": {
       "oneClick": true,
-      "shortcutName": "Builder test program",
-      "artifactName": "Builder test program ${version}.${ext}",
-      "uninstallDisplayName": "Builder test program"
+      "shortcutName": "Builder-test-program",
+      "artifactName": "Builder-test-program-${version}.${ext}",
+      "uninstallDisplayName": "Builder-test-program"
     }
   }
 }
